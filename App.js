@@ -39,16 +39,16 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={estilos.container}>
       <Camera
-        style={styles.camera}
+        style={estilos.camera}
         type={Camera.Constants.Type.back}
         ref={ref => setCamera(ref)}
       />
       <Button title="Tirar Foto" onPress={tirarFoto} />
-      {uriFoto && <Image source={{ uri: uriFoto }} style={styles.previewFoto} />}
-      <TextInput
-        style={styles.input}
+      {uriFoto && <Image source={{ uri: uriFoto }} style={estilos.previewFoto} />}
+      <Text
+        style={estilos.titulo}
         placeholder="Digite o título"
         onChangeText={text => setTitulo(text)}
         value={titulo}
@@ -59,7 +59,7 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
+const estilos = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     height: 200,
     marginTop: 10,
   },
-  input: {
+  titulo: {
     height: 40,
     width: '80%',
     borderColor: 'gray',
