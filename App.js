@@ -16,7 +16,7 @@ import * as MediaLibrary from "expo-media-library";
 import MapView, { Marker } from "react-native-maps";
 import * as Location from "expo-location";
 
-import imagePlaceholder from "./assets/images/placeholder.svg";
+import imagePlaceholder from "./assets/placeholder.png";
 
 export default function App() {
   const [foto, setFoto] = useState(null);
@@ -85,7 +85,7 @@ export default function App() {
       <StatusBar style="auto" />
       <ScrollView>
         <View style={estilos.container}>
-          <Text style={estilos.titulo}>Localizar Fotoineitor</Text>
+          <Text style={estilos.titulo}>PhotoLocalization</Text>
           <View style={estilos.viewFoto}>
             <TextInput style={estilos.input} placeholder="Legenda da foto" />
             {foto ? (
